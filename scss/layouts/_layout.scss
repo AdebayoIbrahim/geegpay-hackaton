@@ -1,0 +1,100 @@
+// layout-stylings
+@use "../global/colors" as *;
+@use "../utils/fonts" as *;
+$padding: 1.2rem 1rem 0.8rem 6.3rem;
+.container {
+  div.navbar {
+    display: flex;
+    justify-content: space-between;
+    background: $boards-color;
+    // width: 100%;
+    padding: $padding;
+    align-items: center;
+    border-bottom: 1px solid $strohe-board;
+    // display: block;
+
+    .nav-header {
+      font-weight: calc($font-bold + 100);
+      font-size: 20px;
+      //   line-height: 28px;
+    }
+  }
+
+  .search-notifications {
+    display: flex;
+    gap: 2.3rem;
+    align-items: center;
+
+    .search-box {
+      position: relative;
+      input {
+        all: unset;
+        width: 300px;
+        padding: 8px 4px;
+        border: 1px solid $strohe-board;
+        border-radius: $curve-radius;
+        text-indent: 35px;
+        background: $bg-color;
+        &::placeholder {
+          font-size: 15px;
+          color: $strohe-board;
+        }
+      }
+      .search-icon {
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        bottom: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .date-curent {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      p {
+        font-family: $variable-font;
+        font-weight: $font-bold;
+        font-size: 14px;
+      }
+    }
+
+    .notify-loginInfo {
+      @extend .date-curent;
+      gap: 1.2rem;
+
+      .bell {
+        background: inherit;
+        padding: 10px;
+        border: 1px solid $strohe-board;
+        border-radius: 50%;
+      }
+      .login_info {
+        background: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        border-radius: 20px;
+        padding: 5px 8px;
+        border: 1px solid $strohe-board;
+
+        h6 {
+          font-size: 16px;
+          font-family: $variable-font;
+          font-weight: 400;
+          color: $font-bold;
+          text-align: center;
+        }
+        p {
+          color: $color_fade;
+          font-weight: 400;
+          font-family: $variable-font;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

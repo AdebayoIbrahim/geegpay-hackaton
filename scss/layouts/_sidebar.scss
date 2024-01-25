@@ -1,0 +1,70 @@
+@use "../global/colors" as *;
+@use "../utils/fonts" as *;
+
+// sidebar-styles
+.sidebar {
+  width: 70px;
+  background: $bg-color;
+  color: white;
+  height: 100vh;
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  border-right: 1px solid $side-border;
+  text-align: center;
+
+  .sidebar_container {
+    background: $bg-side-major;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    align-items: center;
+    padding-top: 20px;
+    // padding-block-end: 10px;
+
+    .side-major,
+    .side-minor {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1.9rem;
+    }
+
+    .side-major {
+      .home {
+        position: relative;
+
+        &::after {
+          position: absolute;
+          content: "";
+          background: $side-tracker;
+          width: calc(100% + 0px);
+          height: 3px;
+          top: 42%;
+          right: -34px;
+          border-radius: 10px 10px 0 0;
+          transform: rotate(-90deg);
+        }
+      }
+
+      .theme_toggle {
+        padding: 12px 8px;
+        background: $bg-color;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        border-radius: calc($curve-radius + 80px);
+
+        // condition-style-for-toggled
+        .active_toggle {
+          background: $badges-green;
+          padding: 6px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}

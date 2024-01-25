@@ -1,0 +1,169 @@
+*,
+*:is(::before, ::after) {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Plus Jakarta Sans";
+  box-sizing: border-box;
+  font-size: 100%;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-text-stroke-width: 0.1px;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ffffff;
+}
+
+* svg {
+  cursor: pointer;
+}
+
+.container div.navbar {
+  display: flex;
+  justify-content: space-between;
+  background: #fafafa;
+  padding: 1.2rem 1rem 0.8rem 6.3rem;
+  align-items: center;
+  border-bottom: 1px solid #dadddd;
+}
+.container div.navbar .nav-header {
+  font-weight: 600;
+  font-size: 20px;
+}
+.container .search-notifications {
+  display: flex;
+  gap: 2.3rem;
+  align-items: center;
+}
+.container .search-notifications .search-box {
+  position: relative;
+}
+.container .search-notifications .search-box input {
+  all: unset;
+  width: 300px;
+  padding: 8px 4px;
+  border: 1px solid #dadddd;
+  border-radius: 20px;
+  text-indent: 35px;
+  background: #ffffff;
+}
+.container .search-notifications .search-box input::-moz-placeholder {
+  font-size: 15px;
+  color: #dadddd;
+}
+.container .search-notifications .search-box input::placeholder {
+  font-size: 15px;
+  color: #dadddd;
+}
+.container .search-notifications .search-box .search-icon {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  bottom: 50%;
+  transform: translate(-50%, -50%);
+}
+.container .search-notifications .date-curent, .container .search-notifications .notify-loginInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.container .search-notifications .date-curent p, .container .search-notifications .notify-loginInfo p {
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 14px;
+}
+.container .search-notifications .notify-loginInfo {
+  gap: 1.2rem;
+}
+.container .search-notifications .notify-loginInfo .bell {
+  background: inherit;
+  padding: 10px;
+  border: 1px solid #dadddd;
+  border-radius: 50%;
+}
+.container .search-notifications .notify-loginInfo .login_info {
+  background: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 20px;
+  padding: 5px 8px;
+  border: 1px solid #dadddd;
+}
+.container .search-notifications .notify-loginInfo .login_info h6 {
+  font-size: 16px;
+  font-family: "Inter";
+  font-weight: 400;
+  color: 500;
+  text-align: center;
+}
+.container .search-notifications .notify-loginInfo .login_info p {
+  color: #787486;
+  font-weight: 400;
+  font-family: "Inter";
+  font-size: 14px;
+}
+
+.sidebar {
+  width: 70px;
+  background: #ffffff;
+  color: white;
+  height: 100vh;
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  border-right: 1px solid #ebecf2;
+  text-align: center;
+}
+.sidebar .sidebar_container {
+  background: #f7f8fa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+  align-items: center;
+  padding-top: 20px;
+}
+.sidebar .sidebar_container .side-major,
+.sidebar .sidebar_container .side-minor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.9rem;
+}
+.sidebar .sidebar_container .side-major .home {
+  position: relative;
+}
+.sidebar .sidebar_container .side-major .home::after {
+  position: absolute;
+  content: "";
+  background: #0d062d;
+  width: calc(100% + 0px);
+  height: 3px;
+  top: 42%;
+  right: -34px;
+  border-radius: 10px 10px 0 0;
+  transform: rotate(-90deg);
+}
+.sidebar .sidebar_container .side-major .theme_toggle {
+  padding: 12px 8px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 100px;
+}
+.sidebar .sidebar_container .side-major .theme_toggle .active_toggle {
+  background: #34caa5;
+  padding: 6px;
+  border-radius: 50%;
+}/*# sourceMappingURL=main.css.map */

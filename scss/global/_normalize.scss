@@ -1,0 +1,29 @@
+@use "../utils/fonts" as *;
+@use "../global/colors" as cl;
+$reset-margin: 0;
+
+*,
+*:is(::before, ::after) {
+  margin: $reset-margin;
+  padding: $reset-margin;
+}
+
+html {
+  font-family: $base-font;
+  box-sizing: border-box;
+  font-size: 100%;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-text-stroke-width: 0.1px;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: cl.$bg-color;
+}
+
+* svg {
+  cursor: pointer;
+}
