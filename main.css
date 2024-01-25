@@ -184,7 +184,7 @@ body {
 
 section.main-cta {
   background: #f7f8fa;
-  padding: 1.2rem 1rem 0.8rem 6.2rem;
+  padding: 0.2rem 1rem 0.8rem 6.2rem;
 }
 section.main-cta .canvas {
   margin-top: 1rem;
@@ -204,6 +204,59 @@ section.main-cta .canvas .canvas-track div:first-child {
   font-weight: 500;
 }
 section.main-cta .canvas .canvas-track .sort {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+section.main-cta .canvas .canvas-track .sort .sort_by, section.main-cta .canvas .canvas-track .sort .options-sort {
   color: #3a3f51;
   font-size: 14px;
+}
+section.main-cta .canvas .canvas-track .sort .options-sort select#sort {
+  border: none;
+  outline: none;
+  border: 1px solid #dadddd;
+  padding: 6px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+section.main-cta .content-stat {
+  display: grid;
+  width: 100%;
+}
+section.main-cta .content-stat .total-area {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 14px;
+  padding: 5px;
+  background: #ffffff;
+}
+section.main-cta .content-stat .total-area .fst_area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+section.main-cta .content-stat .total-area .area-text p {
+  line-height: 28px;
+  color: #898989;
+}
+section.main-cta .content-stat .total-area .badge-text {
+  display: flex;
+  gap: 6px;
+}
+section.main-cta .content-stat .total-area .badge-text span {
+  font-size: 14px;
+  color: #606060;
+}
+section.main-cta .content-stat .total-area .badge-text .badge {
+  font-size: 12px;
+  color: #34caa5;
+  background: rgba(52, 202, 165, 0.12);
+  padding: 5px 8px;
+  border-radius: 20px;
+  text-align: center;
+}
+section.main-cta .content-stat .total-area .badge-text .badge .span_arrow {
+  padding-inline: 2px;
 }/*# sourceMappingURL=main.css.map */

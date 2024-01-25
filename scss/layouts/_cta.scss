@@ -3,7 +3,7 @@
 
 section.main-cta {
   background: $bg-side-major;
-  padding: $padding;
+  padding: $padding-cta;
   //   text-align: center;
 
   .canvas {
@@ -25,8 +25,70 @@ section.main-cta {
         font-weight: 500;
       }
       .sort {
-        color: $fill-sort-by;
-        font-size: 14px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        .sort_by {
+          color: $fill-sort-by;
+          font-size: 14px;
+        }
+        .options-sort {
+          @extend .sort_by;
+
+          select#sort {
+            border: none;
+            outline: none;
+            border: 1px solid $strohe-board;
+            padding: 6px;
+            border-radius: 20px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  .content-stat {
+    display: grid;
+    width: 100%;
+    .total-area {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      border-radius: $board-radius;
+      padding: 5px;
+      background: $bg-color;
+
+      .fst_area {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .area-text {
+        p {
+          line-height: 28px;
+          color: $board-text;
+        }
+      }
+      .badge-text {
+        display: flex;
+        gap: 6px;
+
+        span {
+          font-size: 14px;
+          color: $prev-dash-color;
+        }
+        .badge {
+          font-size: 12px;
+          color: $badges-green;
+          background: $bg-badges-green;
+          padding: 5px 8px;
+          border-radius: 20px;
+          text-align: center;
+
+          .span_arrow {
+            padding-inline: 2px;
+          }
+        }
       }
     }
   }
