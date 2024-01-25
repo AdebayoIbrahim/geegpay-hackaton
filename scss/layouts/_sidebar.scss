@@ -13,15 +13,28 @@
   border-right: 1px solid $side-border;
   text-align: center;
 
+  &::-webkit-scrollbar {
+    background: transparent;
+    width: 0px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    width: 0px;
+    background: transparent;
+  }
+  &::-webkit-scrollbar-track {
+    width: 0px;
+    background: transparent;
+  }
   .sidebar_container {
     background: $bg-side-major;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 3rem;
+    gap: 10rem;
     align-items: center;
     padding-top: 20px;
-    // padding-block-end: 10px;
+    padding-block-end: $curve-radius;
 
     .side-major,
     .side-minor {

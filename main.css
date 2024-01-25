@@ -28,7 +28,7 @@ body {
   display: flex;
   justify-content: space-between;
   background: #fafafa;
-  padding: 1.2rem 1rem 0.8rem 6.3rem;
+  padding: 1.2rem 1rem 0.8rem 6.2rem;
   align-items: center;
   border-bottom: 1px solid #dadddd;
 }
@@ -94,17 +94,17 @@ body {
   align-items: center;
   gap: 12px;
   border-radius: 20px;
-  padding: 5px 8px;
+  padding: 5px 5px;
   border: 1px solid #dadddd;
 }
-.container .search-notifications .notify-loginInfo .login_info h6 {
-  font-size: 16px;
+.container .search-notifications .notify-loginInfo .login_info .name {
+  font-size: 15px;
   font-family: "Inter";
   font-weight: 400;
   color: 500;
   text-align: center;
 }
-.container .search-notifications .notify-loginInfo .login_info p {
+.container .search-notifications .notify-loginInfo .login_info p:not(.name) {
   color: #787486;
   font-weight: 400;
   font-family: "Inter";
@@ -122,14 +122,27 @@ body {
   border-right: 1px solid #ebecf2;
   text-align: center;
 }
+.sidebar::-webkit-scrollbar {
+  background: transparent;
+  width: 0px;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  width: 0px;
+  background: transparent;
+}
+.sidebar::-webkit-scrollbar-track {
+  width: 0px;
+  background: transparent;
+}
 .sidebar .sidebar_container {
   background: #f7f8fa;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 3rem;
+  gap: 10rem;
   align-items: center;
   padding-top: 20px;
+  padding-block-end: 20px;
 }
 .sidebar .sidebar_container .side-major,
 .sidebar .sidebar_container .side-minor {
