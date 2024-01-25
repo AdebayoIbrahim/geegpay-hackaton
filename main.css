@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  background: #ffffff;
+  background: #f7f8fa;
 }
 
 * svg {
@@ -189,5 +189,21 @@ section.main-cta {
 section.main-cta .canvas {
   margin-top: 1rem;
   width: 800px;
-  height: 500px;
+  background: #ffffff;
+  padding: 10px 10px 5px 10px;
+  border-radius: 14px;
+}
+section.main-cta .canvas .canvas-track {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 10px;
+}
+section.main-cta .canvas .canvas-track div:first-child {
+  color: #26282c;
+  font-size: 16px;
+  font-weight: 500;
+}
+section.main-cta .canvas .canvas-track .sort {
+  color: #3a3f51;
+  font-size: 14px;
 }/*# sourceMappingURL=main.css.map */

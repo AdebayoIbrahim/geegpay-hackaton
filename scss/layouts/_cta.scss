@@ -9,6 +9,25 @@ section.main-cta {
   .canvas {
     margin-top: 1rem;
     width: 800px;
-    height: 500px;
+    // height: 500px;
+    background: $bg-color;
+    padding: 10px 10px 5px 10px;
+    border-radius: $board-radius;
+
+    .canvas-track {
+      display: flex;
+      justify-content: space-between;
+      padding-block: 10px;
+
+      div:first-child {
+        color: $text-bold;
+        font-size: 16px;
+        font-weight: 500;
+      }
+      .sort {
+        color: $fill-sort-by;
+        font-size: 14px;
+      }
+    }
   }
 }
