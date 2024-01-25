@@ -1,4 +1,12 @@
-const myChart = new Chart("canvas", {
+const ctx = document.getElementById("canvas").getContext("2d");
+
+Chart.register(ChartDataLabels);
+
+const gradient = ctx.createLinearGradient(0, 0, 0, 300);
+gradient.addColorStop(0, "#34CAA5");
+gradient.addColorStop(1, "rgba(52, 202, 165, 0)");
+
+const myChart = new Chart(ctx, {
   type: "bar",
   data: {
     labels: [
@@ -20,59 +28,79 @@ const myChart = new Chart("canvas", {
         label: "Chartter",
         data: [6.0, 18.0, 4.0, 28.0, 9.0, 45.0, 19.0, 22, 32, 4.8, 30, 27],
         backgroundColor: [
-          "rgba(255, 99, 132, 0.1)",
-          "rgba(255, 159, 64, 0.2)",
-          "rgba(255, 205, 86, 0.2)",
-          "rgba(75, 192, 192, 0.2)",
-          "rgba(54, 162, 235, 0.2)",
-          "rgba(153, 102, 255, 0.2)",
-          "rgba(201, 203, 207, 0.2)",
+          "rgba(52,202,165,.1)",
+          "rgba(52,202,165,.1)",
+          "rgba(52,202,165,.1)",
+          "rgba(52,202,165,.1)",
+          "rgba(52,202,165,.1)",
+          gradient,
+          "rgba(52,202,165,.1)",
+          "rgba(52,202,165,.1)",
+          "rgba(52,202,165,.1)",
+          "rgba(52,202,165,.1)",
+          "rgba(52,202,165,.1)",
+          "rgba(52,202,165,.1)",
         ],
         borderColor: ["transparent"],
+        borderRadius: 50,
       },
     ],
   },
   options: {
-    legend: { display: false },
-    scales: {
-      xAxes: [
-        {
-          ticks: {
-            fontColor: "#525252",
-            fontFamily: "Plus Jakarta Sans",
-            fontSize: 12,
-          },
-          gridLines: {
-            display: false,
-            drawBorder: false,
-          },
+    plugins: {
+      datalabels: {
+        anchor: "end",
+        align: "end",
+        borderRadius: 10,
+        color: "transparent",
+        font: {
+          family: "Plus Jakarta Sans",
+          size: 12,
         },
-      ],
-      yAxes: [
-        {
-          ticks: {
-            min: 0,
-            max: 50,
-            stepSize: 10, // Set the desired step size
-            callback: function (value) {
-              return value === 0
-                ? "0"
-                : value.toLocaleString("en-US", {
-                    minimumFractionDigits: 3,
-                  });
-            },
-            maxTicksLimit: 6,
-            precision: 2,
-            fontColor: "#525252",
-            fontFamily: "Plus Jakarta Sans",
-            fontSize: 12,
-          },
+      },
+      legend: {
+        display: false,
+      },
+    },
 
-          gridLines: {
-            borderDash: [5, 5], // Set the x-axis grid lines to dashes
+    scales: {
+      x: {
+        ticks: {
+          font: {
+            color: "#525252",
+            family: "Plus Jakarta Sans",
+            size: 12,
           },
         },
-      ],
+        grid: {
+          display: false,
+          drawBorder: false,
+        },
+      },
+      y: {
+        ticks: {
+          min: 0,
+          max: 50,
+          stepSize: 10,
+          callback: function (value) {
+            return value === 0
+              ? "0"
+              : value.toLocaleString("en-US", {
+                  minimumFractionDigits: 3,
+                });
+          },
+          maxTicksLimit: 6,
+          precision: 2,
+          font: {
+            color: "#525252",
+            family: "Plus Jakarta Sans",
+            size: 12,
+          },
+        },
+        grid: {
+          borderDash: [5, 5],
+        },
+      },
     },
   },
 });
