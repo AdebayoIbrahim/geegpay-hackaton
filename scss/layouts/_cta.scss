@@ -1,0 +1,8 @@
+@use "../global/colors" as *;
+@use "../utils/fonts" as *;
+
+section.main-cta {
+  background: $bg-side-major;
+  padding: $padding;
+  //   text-align: center;
+}

@@ -179,4 +179,9 @@ body {
   background: #34caa5;
   padding: 6px;
   border-radius: 50%;
+}
+
+section.main-cta {
+  background: #f7f8fa;
+  padding: 1.2rem 1rem 0.8rem 6.2rem;
 }/*# sourceMappingURL=main.css.map */
