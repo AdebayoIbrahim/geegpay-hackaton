@@ -26,7 +26,7 @@ const myChart = new Chart(ctx, {
     datasets: [
       {
         label: "Chartter",
-        data: [6.0, 18.0, 4.0, 28.0, 9.0, 45.0, 19.0, 22, 32, 4.8, 30, 27],
+        data: [6.0, 18.0, 4.0, 28.0, 9.0, 48.0, 19.0, 22, 32, 4.8, 30, 27],
         backgroundColor: [
           "rgba(52,202,165,.1)",
           "rgba(52,202,165,.1)",
@@ -61,6 +61,23 @@ const myChart = new Chart(ctx, {
       legend: {
         display: false,
       },
+      tooltip: {
+        callbacks: {
+          label: (context) => `$${context.formattedValue}`,
+          labelPointStyle: function (context) {
+            return {
+              pointStyle: "none",
+              rotation: 90,
+            };
+          },
+        },
+        usePointStyle: true,
+
+        font: {
+          family: "Plus Jakarta Sans",
+          size: 12,
+        },
+      },
     },
 
     scales: {
@@ -80,16 +97,28 @@ const myChart = new Chart(ctx, {
       y: {
         ticks: {
           min: 0,
-          max: 50,
-          stepSize: 10,
+          max: 60,
+          stepSize: 5,
           callback: function (value) {
-            return value === 0
-              ? "0"
-              : value.toLocaleString("en-US", {
-                  minimumFractionDigits: 3,
-                });
+            if (value === 0) {
+              return "0";
+            } else if (value === 5) {
+              return value.toLocaleString("en-US", {
+                minimumFractionDigits: 3,
+              });
+            } else if (value === 10) {
+              return value.toLocaleString("en-US", {
+                minimumFractionDigits: 3,
+              });
+            } else if (value > 10 && value % 10 === 0 && value <= 50) {
+              return value.toLocaleString("en-US", {
+                minimumFractionDigits: 3,
+              });
+            } else {
+              return "";
+            }
           },
-          maxTicksLimit: 6,
+          maxTicksLimit: 12,
           precision: 2,
           font: {
             color: "#525252",
