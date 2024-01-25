@@ -2,12 +2,13 @@
 *:is(::before, ::after) {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
   font-family: "Plus Jakarta Sans";
   box-sizing: border-box;
-  font-size: 100%;
+  font-size: 90%;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -184,70 +185,84 @@ body {
 
 section.main-cta {
   background: #f7f8fa;
-  padding: 0.2rem 1rem 0.8rem 6.2rem;
+  padding: 1.2rem 1rem 0.2rem 6.2rem;
+  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
 }
-section.main-cta .canvas {
-  margin-top: 1rem;
-  width: 800px;
+section.main-cta .canvas, section.main-cta .grid-row-two {
   background: #ffffff;
   padding: 10px 10px 5px 10px;
   border-radius: 14px;
+  grid-column: span 2;
 }
-section.main-cta .canvas .canvas-track {
+section.main-cta .canvas .canvas-track, section.main-cta .canvas .grid-row-two .table-head, section.main-cta .grid-row-two .canvas .table-head, section.main-cta .grid-row-two .canvas-track, section.main-cta .grid-row-two .table-head {
   display: flex;
   justify-content: space-between;
   padding-block: 10px;
 }
-section.main-cta .canvas .canvas-track div:first-child {
+section.main-cta .canvas .canvas-track div:first-child, section.main-cta .canvas .grid-row-two .table-head div:first-child, section.main-cta .grid-row-two .canvas .table-head div:first-child, section.main-cta .grid-row-two .canvas-track div:first-child, section.main-cta .grid-row-two .table-head div:first-child {
   color: #26282c;
   font-size: 16px;
   font-weight: 500;
 }
-section.main-cta .canvas .canvas-track .sort {
+section.main-cta .canvas .canvas-track .sort, section.main-cta .canvas .grid-row-two .table-head .sort, section.main-cta .grid-row-two .canvas .table-head .sort, section.main-cta .grid-row-two .canvas-track .sort, section.main-cta .grid-row-two .table-head .sort {
   display: flex;
   gap: 10px;
   align-items: center;
 }
-section.main-cta .canvas .canvas-track .sort .sort_by, section.main-cta .canvas .canvas-track .sort .options-sort {
+section.main-cta .canvas .canvas-track .sort .sort_by, section.main-cta .grid-row-two .canvas-track .sort .sort_by, section.main-cta .grid-row-two .table-head .sort .sort_by, section.main-cta .canvas .canvas-track .sort .options-sort, section.main-cta .grid-row-two .canvas-track .sort .options-sort, section.main-cta .grid-row-two .table-head .sort .options-sort {
   color: #3a3f51;
   font-size: 14px;
 }
-section.main-cta .canvas .canvas-track .sort .options-sort select#sort {
+section.main-cta .canvas .canvas-track .sort .options-sort select#sort, section.main-cta .grid-row-two .canvas-track .sort .options-sort select#sort, section.main-cta .grid-row-two .table-head .sort .options-sort select#sort {
   border: none;
   outline: none;
-  border: 1px solid #dadddd;
+  border: 1px solid #edf2f6;
   padding: 6px;
   border-radius: 20px;
   cursor: pointer;
 }
 section.main-cta .content-stat {
+  grid-column: span 2;
   display: grid;
-  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2rem;
 }
 section.main-cta .content-stat .total-area {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
   border-radius: 14px;
-  padding: 5px;
+  padding: 15px;
   background: #ffffff;
 }
 section.main-cta .content-stat .total-area .fst_area {
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: space-between;
 }
 section.main-cta .content-stat .total-area .area-text p {
   line-height: 28px;
   color: #898989;
 }
+section.main-cta .content-stat .total-area .area-text h1 {
+  color: #3a3f51;
+}
 section.main-cta .content-stat .total-area .badge-text {
   display: flex;
-  gap: 6px;
+  align-items: center;
+  gap: 10px;
 }
 section.main-cta .content-stat .total-area .badge-text span {
   font-size: 14px;
   color: #606060;
+}
+section.main-cta .content-stat .total-area .badge-text .alert {
+  color: #ed544e !important;
+  background: rgba(237, 84, 78, 0.12) !important;
 }
 section.main-cta .content-stat .total-area .badge-text .badge {
   font-size: 12px;
@@ -259,4 +274,67 @@ section.main-cta .content-stat .total-area .badge-text .badge {
 }
 section.main-cta .content-stat .total-area .badge-text .badge .span_arrow {
   padding-inline: 2px;
+}
+section.main-cta .grid-row-two .table-head div:first-child {
+  color: #26282c;
+  font-size: 16px;
+  font-weight: 500;
+}
+section.main-cta .grid-row-two .table-head .see-all {
+  font-size: 14px;
+  color: #34caa5;
+}
+section.main-cta .grid-row-two table {
+  width: 100%;
+  border-collapse: collapse;
+}
+section.main-cta .grid-row-two table tr {
+  text-align: left;
+}
+section.main-cta .grid-row-two table tr > td:first-of-type {
+  color: #3a3f51;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  line-height: 24px;
+}
+section.main-cta .grid-row-two table tr > td:nth-child(2) {
+  color: #737373;
+  font-size: 16px;
+  line-height: 24px;
+}
+section.main-cta .grid-row-two table tr > td:nth-child(3) {
+  color: #0d062d;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+section.main-cta .grid-row-two table tr:nth-child(odd) > td:nth-of-type(4) {
+  color: #34caa5;
+}
+section.main-cta .grid-row-two table tr:nth-child(even) > td:nth-of-type(4) {
+  color: #ed544e;
+}
+section.main-cta .grid-row-two table tr > td:last-of-type {
+  color: #0d062d;
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+section.main-cta .grid-row-two table th,
+section.main-cta .grid-row-two table td {
+  border-bottom: 1px solid #edf2f6;
+}
+section.main-cta .grid-row-two table th {
+  color: #9ca4ab;
+  font-weight: 400;
+  padding: 15px 8px;
+}
+section.main-cta .grid-row-two table td {
+  padding: 15px 8px;
 }/*# sourceMappingURL=main.css.map */

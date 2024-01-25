@@ -4,16 +4,20 @@
 section.main-cta {
   background: $bg-side-major;
   padding: $padding-cta;
+  display: flex;
   //   text-align: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
 
   .canvas {
-    margin-top: 1rem;
-    width: 800px;
+    // margin-top: 1rem;
+    // width: 800px;
     // height: 500px;
     background: $bg-color;
     padding: 10px 10px 5px 10px;
     border-radius: $board-radius;
-
+    grid-column: span 2;
     .canvas-track {
       display: flex;
       justify-content: space-between;
@@ -38,7 +42,7 @@ section.main-cta {
           select#sort {
             border: none;
             outline: none;
-            border: 1px solid $strohe-board;
+            border: 1px solid $table-stroke;
             padding: 6px;
             border-radius: 20px;
             cursor: pointer;
@@ -48,34 +52,51 @@ section.main-cta {
     }
   }
   .content-stat {
+    // display: grid;
+    // width: 100%;
+    grid-column: span 2;
     display: grid;
-    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    // justify-content: center;
+    // align-items: center;
+    gap: 2rem;
     .total-area {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 15px;
       border-radius: $board-radius;
-      padding: 5px;
+      padding: 15px;
       background: $bg-color;
+      //   height: 150px;
 
       .fst_area {
         display: flex;
         align-items: center;
-        gap: 10px;
+        justify-content: space-between;
       }
       .area-text {
         p {
           line-height: 28px;
           color: $board-text;
         }
+
+        h1 {
+          color: #3a3f51;
+        }
       }
       .badge-text {
         display: flex;
-        gap: 6px;
+        align-items: center;
+        gap: 10px;
 
         span {
           font-size: 14px;
           color: $prev-dash-color;
+        }
+        .alert {
+          color: $badges-red !important;
+          background: $bg-badges-red !important;
         }
         .badge {
           font-size: 12px;
@@ -89,6 +110,77 @@ section.main-cta {
             padding-inline: 2px;
           }
         }
+      }
+    }
+  }
+  .grid-row-two {
+    @extend .canvas;
+    .table-head {
+      @extend .canvas-track;
+
+      div:first-child {
+        color: $text-bold;
+        font-size: 16px;
+        font-weight: 500;
+      }
+      .see-all {
+        font-size: 14px;
+        color: $badges-green;
+      }
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      tr {
+        text-align: left;
+      }
+      tr > td:first-of-type {
+        color: $fill-sort-by;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 500;
+        line-height: 24px;
+      }
+      tr > td:nth-child(2) {
+        color: $neutral;
+        font-size: 16px;
+        line-height: 24px;
+      }
+      tr > td:nth-child(3) {
+        color: $table_amt;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 500;
+      }
+      tr:nth-child(odd) > td:nth-of-type(4) {
+        color: $badges-green;
+      }
+      tr:nth-child(even) > td:nth-of-type(4) {
+        color: $badges-red;
+      }
+
+      tr > td:last-of-type {
+        color: $table_amt;
+        font-size: 14px;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        cursor: pointer;
+      }
+      th,
+      td {
+        border-bottom: 1px solid $table-stroke;
+      }
+      th {
+        color: $table-head;
+        font-weight: 400;
+        padding: 15px 8px;
+      }
+      td {
+        padding: 15px 8px;
       }
     }
   }
