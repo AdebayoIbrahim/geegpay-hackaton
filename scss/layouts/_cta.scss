@@ -5,4 +5,10 @@ section.main-cta {
   background: $bg-side-major;
   padding: $padding;
   //   text-align: center;
+
+  .canvas {
+    margin-top: 1rem;
+    width: 800px;
+    height: 500px;
+  }
 }

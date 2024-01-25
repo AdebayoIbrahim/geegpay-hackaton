@@ -8,8 +8,9 @@
   color: white;
   height: 100vh;
   overflow-y: auto;
-  position: absolute;
+  position: fixed;
   top: 0;
+  bottom: 0;
   border-right: 1px solid $side-border;
   text-align: center;
 

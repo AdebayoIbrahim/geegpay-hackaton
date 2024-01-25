@@ -117,8 +117,9 @@ body {
   color: white;
   height: 100vh;
   overflow-y: auto;
-  position: absolute;
+  position: fixed;
   top: 0;
+  bottom: 0;
   border-right: 1px solid #ebecf2;
   text-align: center;
 }
@@ -184,4 +185,9 @@ body {
 section.main-cta {
   background: #f7f8fa;
   padding: 1.2rem 1rem 0.8rem 6.2rem;
+}
+section.main-cta .canvas {
+  margin-top: 1rem;
+  width: 800px;
+  height: 500px;
 }/*# sourceMappingURL=main.css.map */
