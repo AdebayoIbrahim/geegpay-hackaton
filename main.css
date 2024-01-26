@@ -190,11 +190,26 @@ section.main-cta {
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
 }
+@media only screen and (min-width: 1400px) {
+  section.main-cta {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
 section.main-cta .canvas, section.main-cta .last-grid-row, section.main-cta .grid-row-two {
   background: #ffffff;
   padding: 15px;
   border-radius: 14px;
   grid-column: span 2;
+}
+@media only screen and (min-width: 1400px) {
+  section.main-cta .canvas, section.main-cta .last-grid-row, section.main-cta .grid-row-two {
+    grid-column: span 3;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  section.main-cta .canvas, section.main-cta .last-grid-row, section.main-cta .grid-row-two {
+    grid-column: span 4;
+  }
 }
 section.main-cta .canvas .canvas-track, section.main-cta .canvas .last-grid-row .last-header, section.main-cta .last-grid-row .canvas .last-header, section.main-cta .last-grid-row .canvas-track, section.main-cta .last-grid-row .last-header, section.main-cta .canvas .grid-row-two .table-head, section.main-cta .last-grid-row .grid-row-two .table-head, section.main-cta .grid-row-two .canvas .table-head, section.main-cta .grid-row-two .last-grid-row .table-head, section.main-cta .grid-row-two .canvas-track, section.main-cta .grid-row-two .last-grid-row .last-header, section.main-cta .last-grid-row .grid-row-two .last-header, section.main-cta .grid-row-two .table-head {
   display: flex;
@@ -229,6 +244,16 @@ section.main-cta .content-stat {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 2rem;
+}
+@media only screen and (min-width: 1400px) {
+  section.main-cta .content-stat {
+    grid-column: span 2;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  section.main-cta .content-stat {
+    grid-column: span 4;
+  }
 }
 section.main-cta .content-stat .total-area {
   display: flex;
@@ -273,6 +298,11 @@ section.main-cta .content-stat .total-area .badge-text .badge {
 }
 section.main-cta .content-stat .total-area .badge-text .badge .span_arrow {
   padding-inline: 2px;
+}
+@media only screen and (min-width: 1400px) {
+  section.main-cta .grid-row-two {
+    grid-column: span 3;
+  }
 }
 section.main-cta .grid-row-two .table-head div:first-child {
   color: #26282c;
@@ -340,6 +370,11 @@ section.main-cta .grid-row-two table th,
 section.main-cta .grid-row-two table tr:not(:last-of-type) {
   border-bottom: 1px solid #edf2f6;
 }
+@media only screen and (min-width: 1400px) {
+  section.main-cta .last-grid-row {
+    grid-column: span 2;
+  }
+}
 section.main-cta .last-grid-row .last-header div:first-child {
   color: #26282c;
   font-size: 16px;
@@ -363,20 +398,32 @@ section.main-cta .last-grid-row .content-platform .book-bazar .text-title {
   font-size: 16px;
   font-weight: 500;
 }
-section.main-cta .last-grid-row .content-platform .book-bazar .progress-bar {
+section.main-cta .last-grid-row .content-platform .book-bazar .progress-bar, section.main-cta .last-grid-row .content-platform .book-bazar .progress-bar-store, section.main-cta .last-grid-row .content-platform .book-bazar .progress-bar-troop, section.main-cta .last-grid-row .content-platform .book-bazar .progress-bar-artisan {
   width: 100%;
   height: 12px;
   border-radius: 40px;
   position: relative;
   background: #f5f5f5;
 }
-section.main-cta .last-grid-row .content-platform .book-bazar .progress-bar::before {
+section.main-cta .last-grid-row .content-platform .book-bazar .progress-bar::before, section.main-cta .last-grid-row .content-platform .book-bazar .progress-bar-store::before, section.main-cta .last-grid-row .content-platform .book-bazar .progress-bar-troop::before, section.main-cta .last-grid-row .content-platform .book-bazar .progress-bar-artisan::before {
   position: absolute;
   content: "";
   background: #6160dc;
-  width: 70%;
-  height: 12px;
+  width: 54.2%;
+  height: 10px;
   border-radius: inherit;
+}
+section.main-cta .last-grid-row .content-platform .book-bazar .progress-bar-artisan:before {
+  background: #54c5eb;
+  width: 45.2%;
+}
+section.main-cta .last-grid-row .content-platform .book-bazar .progress-bar-troop:before {
+  background: #ffb74a;
+  width: 27.02%;
+}
+section.main-cta .last-grid-row .content-platform .book-bazar .progress-bar-store:before {
+  background: #ff4a55;
+  width: 27.02%;
 }
 section.main-cta .last-grid-row .content-platform .rate, section.main-cta .last-grid-row .content-platform .book-bazar .rate {
   display: flex;

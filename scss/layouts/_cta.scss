@@ -10,14 +10,25 @@ section.main-cta {
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
 
+  @media only screen and (min-width: 1400px) {
+    // grid-column: span 3;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
   .canvas {
-    // margin-top: 1rem;
-    // width: 800px;
-    // height: 500px;
     background: $bg-color;
     padding: 15px;
     border-radius: $board-radius;
     grid-column: span 2;
+
+    @media only screen and (min-width: 1400px) {
+      grid-column: span 3;
+    }
+
+    @media only screen and (max-width: 1000px) {
+      grid-column: span 4;
+    }
+
     .canvas-track {
       display: flex;
       justify-content: space-between;
@@ -61,6 +72,15 @@ section.main-cta {
     // justify-content: center;
     // align-items: center;
     gap: 2rem;
+
+    @media only screen and (min-width: 1400px) {
+      grid-column: span 2;
+    }
+
+    @media only screen and (max-width: 1000px) {
+      grid-column: span 4;
+    }
+
     .total-area {
       display: flex;
       flex-direction: column;
@@ -115,6 +135,10 @@ section.main-cta {
   }
   .grid-row-two {
     @extend .canvas;
+
+    @media only screen and (min-width: 1400px) {
+      grid-column: span 3;
+    }
     .table-head {
       @extend .canvas-track;
 
@@ -192,6 +216,10 @@ section.main-cta {
   //   last-grid-row
   .last-grid-row {
     @extend .canvas;
+
+    @media only screen and (min-width: 1400px) {
+      grid-column: span 2;
+    }
     .last-header {
       @extend .canvas-track;
       div:first-child {
@@ -229,9 +257,30 @@ section.main-cta {
             position: absolute;
             content: "";
             background: $progress-bazar;
-            width: 70%;
-            height: 12px;
+            width: calc(54% + 0.2%);
+            height: 10px;
             border-radius: inherit;
+          }
+        }
+        .progress-bar-artisan {
+          @extend .progress-bar;
+          &:before {
+            background: $progress-artiste;
+            width: calc(100% - 54.8%);
+          }
+        }
+        .progress-bar-troop {
+          @extend .progress-bar;
+          &:before {
+            background: $progress-troop;
+            width: calc(100% - 72.98%);
+          }
+        }
+        .progress-bar-store {
+          @extend .progress-bar;
+          &:before {
+            background: $progress-store;
+            width: calc(100% - 72.98%);
           }
         }
       }

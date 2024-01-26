@@ -26,7 +26,7 @@ const myChart = new Chart(ctx, {
     datasets: [
       {
         label: "Chartter",
-        data: [6.0, 18.0, 4.0, 28.0, 9.0, 48.0, 19.0, 22, 32, 4.8, 30, 27],
+        data: [6.0, 18.0, 4.0, 28.0, 9.0, 46.0, 19.0, 22, 32, 4.8, 30, 27],
         backgroundColor: [
           "rgba(52,202,165,.1)",
           "rgba(52,202,165,.1)",
@@ -47,6 +47,7 @@ const myChart = new Chart(ctx, {
     ],
   },
   options: {
+    responsive: true,
     plugins: {
       datalabels: {
         anchor: "end",
@@ -119,7 +120,7 @@ const myChart = new Chart(ctx, {
               return "";
             }
           },
-          maxTicksLimit: 12,
+          maxTicksLimit: 20,
           precision: 2,
           font: {
             color: "#525252",
