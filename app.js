@@ -157,6 +157,6 @@ const monthArr = [
 const getDay = monthArr[new Date().getMonth()];
 console.log(getDay);
 //set output to date value
-const day = new Date().getDay();
+const day = new Date().getDate();
 const yr = new Date().getFullYear();
 date.textContent = `${getDay} ${day}, ${yr}`;
