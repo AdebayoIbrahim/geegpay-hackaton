@@ -207,16 +207,32 @@ section.main-cta {
     .content-platform {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 20px;
 
       .book-bazar {
         @extend .content-platform;
-        gap: 8px !important;
+        gap: 15px !important;
         padding-top: 5px;
         .text-title {
           color: $text-bold;
           font-size: 16px;
           font-weight: 500;
+        }
+        .progress-bar {
+          width: 100%;
+          height: 12px;
+          border-radius: 40px;
+          position: relative;
+          background: $progress-layer;
+
+          &::before {
+            position: absolute;
+            content: "";
+            background: $progress-bazar;
+            width: 70%;
+            height: 12px;
+            border-radius: inherit;
+          }
         }
       }
 
@@ -229,6 +245,7 @@ section.main-cta {
           font-weight: 400;
           font-size: 18px;
           line-height: 26px;
+          color: $neutral;
         }
       }
     }

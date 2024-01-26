@@ -83,6 +83,7 @@ const myChart = new Chart(ctx, {
     scales: {
       x: {
         ticks: {
+          // display: false,
           font: {
             color: "#525252",
             family: "Plus Jakarta Sans",
@@ -127,7 +128,8 @@ const myChart = new Chart(ctx, {
           },
         },
         grid: {
-          borderDash: [5, 5],
+          borderDash: [2, 2],
+          drawBorder: false,
         },
       },
     },
