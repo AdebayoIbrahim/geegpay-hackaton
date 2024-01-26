@@ -5,30 +5,48 @@ section.main-cta {
   background: $bg-side-major;
   padding: $padding-cta;
   display: flex;
+  //   height: 100vh;
+  //   overflow-y: auto;
   //   text-align: center;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+
   gap: 2rem;
 
   @media only screen and (min-width: 1400px) {
-    // grid-column: span 3;
     grid-template-columns: repeat(5, 1fr);
+  }
+
+  @media only screen and (min-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media only screen and (max-width: 163px) {
+    grid-auto-flow: row;
+    grid-template-columns: repeat(autofit, min-max(1fr, 1fr));
+  }
+  @media only screen and (max-width: 650px) {
+    gap: 1.8rem;
   }
 
   .canvas {
     background: $bg-color;
     padding: 15px;
     border-radius: $board-radius;
-    grid-column: span 2;
 
     @media only screen and (min-width: 1400px) {
       grid-column: span 3;
     }
 
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (min-width: 1200px) {
+      grid-column: span 2;
+    }
+
+    @media only screen and (max-width: 1024px) {
       grid-column: span 4;
     }
 
+    @media only screen and (max-width: 900px) {
+    }
     .canvas-track {
       display: flex;
       justify-content: space-between;
@@ -63,9 +81,6 @@ section.main-cta {
     }
   }
   .content-stat {
-    // display: grid;
-    // width: 100%;
-    grid-column: span 2;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -77,10 +92,18 @@ section.main-cta {
       grid-column: span 2;
     }
 
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (min-width: 1200px) {
+      grid-column: span 2;
+    }
+
+    @media only screen and (max-width: 1024px) {
       grid-column: span 4;
     }
 
+    @media only screen and (max-width: 650px) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1.8rem;
+    }
     .total-area {
       display: flex;
       flex-direction: column;
@@ -138,6 +161,14 @@ section.main-cta {
 
     @media only screen and (min-width: 1400px) {
       grid-column: span 3;
+    }
+
+    @media only screen and (min-width: 1200px) {
+      grid-column: span 2;
+    }
+
+    @media only screen and (max-width: 620px) {
+      grid-template-columns: repeat(1, 1fr);
     }
     .table-head {
       @extend .canvas-track;
@@ -220,6 +251,10 @@ section.main-cta {
     @media only screen and (min-width: 1400px) {
       grid-column: span 2;
     }
+    @media only screen and (min-width: 1200px) {
+      grid-column: span 2;
+    }
+
     .last-header {
       @extend .canvas-track;
       div:first-child {
@@ -298,5 +333,11 @@ section.main-cta {
         }
       }
     }
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  tr > td:first-of-type img {
+    display: none;
   }
 }

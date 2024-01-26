@@ -7,16 +7,15 @@
     display: flex;
     justify-content: space-between;
     background: $boards-color;
-    // width: 100%;
+    position: sticky;
+    top: 0;
     padding: $padding;
     align-items: center;
     border-bottom: 1px solid $strohe-board;
-    // display: block;
-
+    // overflow-x: hidden;
     .nav-header {
       font-weight: calc($font-bold + 100);
       font-size: 20px;
-      //   line-height: 28px;
     }
   }
 
@@ -27,6 +26,9 @@
 
     .search-box {
       position: relative;
+      @media only screen and (max-width: 500px) {
+        display: none;
+      }
       input {
         all: unset;
         width: 300px;
@@ -38,6 +40,9 @@
         &::placeholder {
           font-size: 15px;
           color: $strohe-board;
+        }
+        @media only screen and (max-width: 856px) {
+          width: 100%;
         }
       }
       .search-icon {
@@ -54,45 +59,83 @@
       align-items: center;
       gap: 8px;
 
+      svg {
+        @media only screen and (max-width: 712px) {
+          display: none;
+        }
+      }
+
       p {
         font-family: $variable-font;
         font-weight: $font-bold;
         font-size: 14px;
+
+        @media only screen and (max-width: 712px) {
+          display: none;
+        }
       }
     }
 
     .notify-loginInfo {
-      @extend .date-curent;
-      gap: 1.2rem;
+      .logo-bell-sm {
+        display: none;
 
-      .bell {
-        background: inherit;
-        padding: 10px;
-        border: 1px solid $strohe-board;
-        border-radius: 50%;
-      }
-      .login_info {
-        background: inherit;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 12px;
-        border-radius: 20px;
-        padding: 5px 5px;
-        border: 1px solid $strohe-board;
-
-        .name {
-          font-size: 15px;
-          font-family: $variable-font;
-          font-weight: 400;
-          color: $font-bold;
+        .dj {
+          background: $badges-green;
+          padding: 7px 8px;
+          border-radius: 8px;
+          color: $bg-color;
           text-align: center;
         }
-        p:not(.name) {
-          color: $color_fade;
-          font-weight: 400;
-          font-family: $variable-font;
-          font-size: 14px;
+
+        .bell {
+          background: inherit;
+          padding: 10px;
+          border: 1px solid $strohe-board;
+          border-radius: 50%;
+        }
+        @media only screen and (max-width: 1020px) {
+          display: flex;
+          align-items: center;
+          gap: 1.2rem;
+        }
+      }
+      .logo-major {
+        @extend .date-curent;
+        gap: 1.2rem;
+
+        .bell {
+          background: inherit;
+          padding: 10px;
+          border: 1px solid $strohe-board;
+          border-radius: 50%;
+        }
+        .login_info {
+          background: inherit;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 12px;
+          border-radius: 20px;
+          padding: 5px 5px;
+          border: 1px solid $strohe-board;
+
+          .name {
+            font-size: 15px;
+            font-family: $variable-font;
+            font-weight: 400;
+            color: $font-bold;
+            text-align: center;
+          }
+          p:not(.name) {
+            color: $color_fade;
+            font-weight: 400;
+            font-family: $variable-font;
+            font-size: 14px;
+          }
+        }
+        @media only screen and (max-width: 1020px) {
+          display: none;
         }
       }
     }

@@ -15,6 +15,14 @@ html {
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
 }
+html::-webkit-scrollbar {
+  display: inline-flex;
+  width: 0.38vw;
+}
+html::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, rgba(52, 202, 165, 0));
+  border-radius: 20px;
+}
 
 body {
   background: #f7f8fa;
@@ -28,6 +36,8 @@ body {
   display: flex;
   justify-content: space-between;
   background: #fafafa;
+  position: sticky;
+  top: 0;
   padding: 1.2rem 1rem 0.8rem 6.2rem;
   align-items: center;
   border-bottom: 1px solid #dadddd;
@@ -43,6 +53,11 @@ body {
 }
 .container .search-notifications .search-box {
   position: relative;
+}
+@media only screen and (max-width: 500px) {
+  .container .search-notifications .search-box {
+    display: none;
+  }
 }
 .container .search-notifications .search-box input {
   all: unset;
@@ -61,6 +76,11 @@ body {
   font-size: 15px;
   color: #dadddd;
 }
+@media only screen and (max-width: 856px) {
+  .container .search-notifications .search-box input {
+    width: 100%;
+  }
+}
 .container .search-notifications .search-box .search-icon {
   position: absolute;
   top: 50%;
@@ -68,26 +88,59 @@ body {
   bottom: 50%;
   transform: translate(-50%, -50%);
 }
-.container .search-notifications .date-curent, .container .search-notifications .notify-loginInfo {
+.container .search-notifications .date-curent, .container .search-notifications .notify-loginInfo .logo-major {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-.container .search-notifications .date-curent p, .container .search-notifications .notify-loginInfo p {
+@media only screen and (max-width: 712px) {
+  .container .search-notifications .date-curent svg, .container .search-notifications .notify-loginInfo .logo-major svg {
+    display: none;
+  }
+}
+.container .search-notifications .date-curent p, .container .search-notifications .notify-loginInfo .logo-major p {
   font-family: "Inter";
   font-weight: 500;
   font-size: 14px;
 }
-.container .search-notifications .notify-loginInfo {
-  gap: 1.2rem;
+@media only screen and (max-width: 712px) {
+  .container .search-notifications .date-curent p, .container .search-notifications .notify-loginInfo .logo-major p {
+    display: none;
+  }
 }
-.container .search-notifications .notify-loginInfo .bell {
+.container .search-notifications .notify-loginInfo .logo-bell-sm {
+  display: none;
+}
+.container .search-notifications .notify-loginInfo .logo-bell-sm .dj {
+  background: #34caa5;
+  padding: 7px 8px;
+  border-radius: 8px;
+  color: #ffffff;
+  text-align: center;
+}
+.container .search-notifications .notify-loginInfo .logo-bell-sm .bell {
   background: inherit;
   padding: 10px;
   border: 1px solid #dadddd;
   border-radius: 50%;
 }
-.container .search-notifications .notify-loginInfo .login_info {
+@media only screen and (max-width: 1020px) {
+  .container .search-notifications .notify-loginInfo .logo-bell-sm {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+  }
+}
+.container .search-notifications .notify-loginInfo .logo-major {
+  gap: 1.2rem;
+}
+.container .search-notifications .notify-loginInfo .logo-major .bell {
+  background: inherit;
+  padding: 10px;
+  border: 1px solid #dadddd;
+  border-radius: 50%;
+}
+.container .search-notifications .notify-loginInfo .logo-major .login_info {
   background: inherit;
   display: flex;
   justify-content: center;
@@ -97,18 +150,23 @@ body {
   padding: 5px 5px;
   border: 1px solid #dadddd;
 }
-.container .search-notifications .notify-loginInfo .login_info .name {
+.container .search-notifications .notify-loginInfo .logo-major .login_info .name {
   font-size: 15px;
   font-family: "Inter";
   font-weight: 400;
   color: 500;
   text-align: center;
 }
-.container .search-notifications .notify-loginInfo .login_info p:not(.name) {
+.container .search-notifications .notify-loginInfo .logo-major .login_info p:not(.name) {
   color: #787486;
   font-weight: 400;
   font-family: "Inter";
   font-size: 14px;
+}
+@media only screen and (max-width: 1020px) {
+  .container .search-notifications .notify-loginInfo .logo-major {
+    display: none;
+  }
 }
 
 .sidebar {
@@ -187,7 +245,6 @@ section.main-cta {
   padding: 1.2rem 1rem 0.8rem 6.2rem;
   display: flex;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
 }
 @media only screen and (min-width: 1400px) {
@@ -195,18 +252,38 @@ section.main-cta {
     grid-template-columns: repeat(5, 1fr);
   }
 }
+@media only screen and (min-width: 1200px) {
+  section.main-cta {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media only screen and (max-width: 163px) {
+  section.main-cta {
+    grid-auto-flow: row;
+    grid-template-columns: repeat(autofit, min-max(1fr, 1fr));
+  }
+}
+@media only screen and (max-width: 650px) {
+  section.main-cta {
+    gap: 1.8rem;
+  }
+}
 section.main-cta .canvas, section.main-cta .last-grid-row, section.main-cta .grid-row-two {
   background: #ffffff;
   padding: 15px;
   border-radius: 14px;
-  grid-column: span 2;
 }
 @media only screen and (min-width: 1400px) {
   section.main-cta .canvas, section.main-cta .last-grid-row, section.main-cta .grid-row-two {
     grid-column: span 3;
   }
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (min-width: 1200px) {
+  section.main-cta .canvas, section.main-cta .last-grid-row, section.main-cta .grid-row-two {
+    grid-column: span 2;
+  }
+}
+@media only screen and (max-width: 1024px) {
   section.main-cta .canvas, section.main-cta .last-grid-row, section.main-cta .grid-row-two {
     grid-column: span 4;
   }
@@ -239,7 +316,6 @@ section.main-cta .canvas .canvas-track .sort .options-sort select#sort, section.
   cursor: pointer;
 }
 section.main-cta .content-stat {
-  grid-column: span 2;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -250,9 +326,20 @@ section.main-cta .content-stat {
     grid-column: span 2;
   }
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (min-width: 1200px) {
+  section.main-cta .content-stat {
+    grid-column: span 2;
+  }
+}
+@media only screen and (max-width: 1024px) {
   section.main-cta .content-stat {
     grid-column: span 4;
+  }
+}
+@media only screen and (max-width: 650px) {
+  section.main-cta .content-stat {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.8rem;
   }
 }
 section.main-cta .content-stat .total-area {
@@ -302,6 +389,16 @@ section.main-cta .content-stat .total-area .badge-text .badge .span_arrow {
 @media only screen and (min-width: 1400px) {
   section.main-cta .grid-row-two {
     grid-column: span 3;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  section.main-cta .grid-row-two {
+    grid-column: span 2;
+  }
+}
+@media only screen and (max-width: 620px) {
+  section.main-cta .grid-row-two {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 section.main-cta .grid-row-two .table-head div:first-child {
@@ -375,6 +472,11 @@ section.main-cta .grid-row-two table tr:not(:last-of-type) {
     grid-column: span 2;
   }
 }
+@media only screen and (min-width: 1200px) {
+  section.main-cta .last-grid-row {
+    grid-column: span 2;
+  }
+}
 section.main-cta .last-grid-row .last-header div:first-child {
   color: #26282c;
   font-size: 16px;
@@ -435,4 +537,10 @@ section.main-cta .last-grid-row .content-platform .rate p, section.main-cta .las
   font-size: 18px;
   line-height: 26px;
   color: #737373;
+}
+
+@media only screen and (max-width: 620px) {
+  tr > td:first-of-type img {
+    display: none;
+  }
 }/*# sourceMappingURL=main.css.map */
