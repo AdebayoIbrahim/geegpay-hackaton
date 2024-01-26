@@ -136,3 +136,27 @@ const myChart = new Chart(ctx, {
     },
   },
 });
+
+const date = document.querySelector(".ddy");
+
+const monthArr = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+const getDay = monthArr[new Date().getMonth()];
+console.log(getDay);
+//set output to date value
+const day = new Date().getDay();
+const yr = new Date().getFullYear();
+date.textContent = `${getDay} ${day}, ${yr}`;
