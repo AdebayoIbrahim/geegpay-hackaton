@@ -2,7 +2,6 @@
 *:is(::before, ::after) {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 html {
@@ -191,32 +190,32 @@ section.main-cta {
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
 }
-section.main-cta .canvas, section.main-cta .grid-row-two {
+section.main-cta .canvas, section.main-cta .last-grid-row, section.main-cta .grid-row-two {
   background: #ffffff;
-  padding: 10px 10px 5px 10px;
+  padding: 15px;
   border-radius: 14px;
   grid-column: span 2;
 }
-section.main-cta .canvas .canvas-track, section.main-cta .canvas .grid-row-two .table-head, section.main-cta .grid-row-two .canvas .table-head, section.main-cta .grid-row-two .canvas-track, section.main-cta .grid-row-two .table-head {
+section.main-cta .canvas .canvas-track, section.main-cta .canvas .last-grid-row .last-header, section.main-cta .last-grid-row .canvas .last-header, section.main-cta .last-grid-row .canvas-track, section.main-cta .last-grid-row .last-header, section.main-cta .canvas .grid-row-two .table-head, section.main-cta .last-grid-row .grid-row-two .table-head, section.main-cta .grid-row-two .canvas .table-head, section.main-cta .grid-row-two .last-grid-row .table-head, section.main-cta .grid-row-two .canvas-track, section.main-cta .grid-row-two .last-grid-row .last-header, section.main-cta .last-grid-row .grid-row-two .last-header, section.main-cta .grid-row-two .table-head {
   display: flex;
   justify-content: space-between;
   padding-block: 10px;
 }
-section.main-cta .canvas .canvas-track div:first-child, section.main-cta .canvas .grid-row-two .table-head div:first-child, section.main-cta .grid-row-two .canvas .table-head div:first-child, section.main-cta .grid-row-two .canvas-track div:first-child, section.main-cta .grid-row-two .table-head div:first-child {
+section.main-cta .canvas .canvas-track div:first-child, section.main-cta .canvas .last-grid-row .last-header div:first-child, section.main-cta .last-grid-row .canvas .last-header div:first-child, section.main-cta .last-grid-row .canvas-track div:first-child, section.main-cta .last-grid-row .last-header div:first-child, section.main-cta .canvas .grid-row-two .table-head div:first-child, section.main-cta .last-grid-row .grid-row-two .table-head div:first-child, section.main-cta .grid-row-two .canvas .table-head div:first-child, section.main-cta .grid-row-two .last-grid-row .table-head div:first-child, section.main-cta .grid-row-two .canvas-track div:first-child, section.main-cta .grid-row-two .last-grid-row .last-header div:first-child, section.main-cta .last-grid-row .grid-row-two .last-header div:first-child, section.main-cta .grid-row-two .table-head div:first-child {
   color: #26282c;
   font-size: 16px;
   font-weight: 500;
 }
-section.main-cta .canvas .canvas-track .sort, section.main-cta .canvas .grid-row-two .table-head .sort, section.main-cta .grid-row-two .canvas .table-head .sort, section.main-cta .grid-row-two .canvas-track .sort, section.main-cta .grid-row-two .table-head .sort {
+section.main-cta .canvas .canvas-track .sort, section.main-cta .canvas .last-grid-row .last-header .sort, section.main-cta .last-grid-row .canvas .last-header .sort, section.main-cta .last-grid-row .canvas-track .sort, section.main-cta .last-grid-row .last-header .sort, section.main-cta .canvas .grid-row-two .table-head .sort, section.main-cta .last-grid-row .grid-row-two .table-head .sort, section.main-cta .grid-row-two .canvas .table-head .sort, section.main-cta .grid-row-two .last-grid-row .table-head .sort, section.main-cta .grid-row-two .canvas-track .sort, section.main-cta .grid-row-two .last-grid-row .last-header .sort, section.main-cta .last-grid-row .grid-row-two .last-header .sort, section.main-cta .grid-row-two .table-head .sort {
   display: flex;
   gap: 10px;
   align-items: center;
 }
-section.main-cta .canvas .canvas-track .sort .sort_by, section.main-cta .grid-row-two .canvas-track .sort .sort_by, section.main-cta .grid-row-two .table-head .sort .sort_by, section.main-cta .canvas .canvas-track .sort .options-sort, section.main-cta .grid-row-two .canvas-track .sort .options-sort, section.main-cta .grid-row-two .table-head .sort .options-sort {
+section.main-cta .canvas .canvas-track .sort .sort_by, section.main-cta .last-grid-row .canvas-track .sort .sort_by, section.main-cta .last-grid-row .last-header .sort .sort_by, section.main-cta .grid-row-two .canvas-track .sort .sort_by, section.main-cta .grid-row-two .table-head .sort .sort_by, section.main-cta .canvas .canvas-track .sort .options-sort, section.main-cta .last-grid-row .canvas-track .sort .options-sort, section.main-cta .last-grid-row .last-header .sort .options-sort, section.main-cta .grid-row-two .canvas-track .sort .options-sort, section.main-cta .grid-row-two .table-head .sort .options-sort {
   color: #3a3f51;
   font-size: 14px;
 }
-section.main-cta .canvas .canvas-track .sort .options-sort select#sort, section.main-cta .grid-row-two .canvas-track .sort .options-sort select#sort, section.main-cta .grid-row-two .table-head .sort .options-sort select#sort {
+section.main-cta .canvas .canvas-track .sort .options-sort select#sort, section.main-cta .last-grid-row .canvas-track .sort .options-sort select#sort, section.main-cta .last-grid-row .last-header .sort .options-sort select#sort, section.main-cta .grid-row-two .canvas-track .sort .options-sort select#sort, section.main-cta .grid-row-two .table-head .sort .options-sort select#sort {
   border: none;
   outline: none;
   border: 1px solid #edf2f6;
@@ -290,6 +289,8 @@ section.main-cta .grid-row-two table {
 }
 section.main-cta .grid-row-two table tr {
   text-align: left;
+  margin: 0;
+  padding: 0;
 }
 section.main-cta .grid-row-two table tr > td:first-of-type {
   color: #3a3f51;
@@ -325,10 +326,7 @@ section.main-cta .grid-row-two table tr > td:last-of-type {
   align-items: center;
   gap: 5px;
   cursor: pointer;
-}
-section.main-cta .grid-row-two table th,
-section.main-cta .grid-row-two table td {
-  border-bottom: 1px solid #edf2f6;
+  margin-bottom: 10px;
 }
 section.main-cta .grid-row-two table th {
   color: #9ca4ab;
@@ -337,4 +335,41 @@ section.main-cta .grid-row-two table th {
 }
 section.main-cta .grid-row-two table td {
   padding: 15px 8px;
+}
+section.main-cta .grid-row-two table th,
+section.main-cta .grid-row-two table tr:not(:last-of-type) {
+  border-bottom: 1px solid #edf2f6;
+}
+section.main-cta .last-grid-row .last-header div:first-child {
+  color: #26282c;
+  font-size: 16px;
+  font-weight: 500;
+}
+section.main-cta .last-grid-row .last-header .see-all {
+  font-size: 14px;
+  color: #34caa5;
+}
+section.main-cta .last-grid-row .content-platform, section.main-cta .last-grid-row .content-platform .book-bazar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+section.main-cta .last-grid-row .content-platform .book-bazar, section.main-cta .last-grid-row .content-platform .book-bazar .book-bazar {
+  gap: 8px !important;
+  padding-top: 5px;
+}
+section.main-cta .last-grid-row .content-platform .book-bazar .text-title {
+  color: #26282c;
+  font-size: 16px;
+  font-weight: 500;
+}
+section.main-cta .last-grid-row .content-platform .rate, section.main-cta .last-grid-row .content-platform .book-bazar .rate {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section.main-cta .last-grid-row .content-platform .rate p, section.main-cta .last-grid-row .content-platform .book-bazar .rate p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
 }/*# sourceMappingURL=main.css.map */
