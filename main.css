@@ -15,12 +15,14 @@ html {
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
 }
-html::-webkit-scrollbar {
+
+::-webkit-scrollbar {
   display: inline-flex;
   width: 0.38vw;
 }
-html::-webkit-scrollbar-thumb {
-  background: linear-gradient(transparent, rgba(52, 202, 165, 0));
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, #65ac9a);
   border-radius: 20px;
 }
 
