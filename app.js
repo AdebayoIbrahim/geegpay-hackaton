@@ -182,7 +182,7 @@ notifyBell.forEach((n) => {
   });
 });
 notifyBell.forEach((n) => {
-  n.addEventListener("click", (e) => {
+  n.addEventListener("keydown", (e) => {
     if (e.key == "Enter") {
       handleNotify();
     }
