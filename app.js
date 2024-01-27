@@ -172,3 +172,23 @@ const getDay = monthArr[new Date().getMonth()];
 const day = new Date().getDate();
 const yr = new Date().getFullYear();
 date.textContent = `${getDay} ${day}, ${yr}`;
+
+// for-notify-bell-click
+const notifyBell = document.querySelectorAll(".bell");
+const notifyBar = document.querySelector(".notify");
+notifyBell.forEach((n) => {
+  n.addEventListener("click", () => {
+    handleNotify();
+  });
+});
+notifyBell.forEach((n) => {
+  n.addEventListener("click", (e) => {
+    if (e.key == "Enter") {
+      handleNotify();
+    }
+  });
+});
+
+function handleNotify() {
+  notifyBar.classList.toggle("notifyShow");
+}

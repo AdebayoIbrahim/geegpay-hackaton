@@ -86,6 +86,7 @@
           border-radius: 8px;
           color: $bg-color;
           text-align: center;
+          cursor: pointer;
         }
 
         .bell {
@@ -140,4 +141,66 @@
       }
     }
   }
+}
+
+// conditional-css-for-notification
+
+.notify {
+  position: absolute;
+  top: 90px;
+  right: 20px;
+  z-index: 100;
+  width: clamp(15em, 380px, 380px);
+  padding: 15px;
+  background: $bg-color;
+  border: 1px solid $strohe-board;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 14px;
+  display: none;
+}
+
+.notifyShow {
+  display: block;
+}
+.login_drpdnn_show {
+  display: block !important;
+}
+.notify_label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.notify_label > div:first-of-type {
+  font-size: 14px;
+  font-weight: 500;
+}
+.notify_buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.notify_buttons > button:not(:last-of-type) {
+  padding: 3px;
+}
+.notify_buttons > button {
+  all: unset;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 4px;
+  background: transparent;
+  border: 1px solid transparent;
+}
+.notifies {
+  padding-top: 20px;
+}
+.notifies_text {
+  $grey-100: #616161;
+  --light: #e3e3e3;
+  padding: 12px;
+  font-size: 13px;
+  text-align: center;
+  font-weight: 500;
+  color: var(--grey-100);
+  background: var(--light);
 }
