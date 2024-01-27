@@ -192,3 +192,21 @@ notifyBell.forEach((n) => {
 function handleNotify() {
   notifyBar.classList.toggle("notifyShow");
 }
+
+const login_info = document.querySelectorAll("#expand_login");
+const login_dropdwn = document.querySelector(".login_dropdwn");
+const toggleLoginDropdown = () => {
+  login_dropdwn.classList.toggle("login_drpdnn_show");
+};
+
+login_info.forEach((f) => {
+  f.addEventListener("click", toggleLoginDropdown);
+});
+
+login_info.forEach((f) => {
+  f.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      toggleLoginDropdown();
+    }
+  });
+});

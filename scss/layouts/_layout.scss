@@ -216,3 +216,142 @@
   color: var(--grey-100);
   background: var(--light);
 }
+
+// conditional-css-for-login
+
+/* login-dropdown */
+.login_dropdwn {
+  background: $bg-color;
+  position: absolute;
+  top: 90px;
+  right: 20px;
+  z-index: 100;
+  width: clamp(15em, 380px, 380px);
+  padding: 8px;
+  background: $bg-color;
+  border: 1px solid #dbdbdb;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 14px;
+  /* overflow-y: none !important; */
+  overflow-x: hidden;
+  display: none;
+
+  @media only screen and (max-width: 600px) {
+    width: 150px;
+  }
+}
+/* //toggle-func-for-display */
+.login_details {
+  --grey-100: #616161;
+  --light: #e3e3e3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--light);
+  padding: 6px;
+  border-radius: 14px;
+}
+
+.login_mark {
+  margin-right: 10px;
+}
+
+.login_davii {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.login_davii .name_login {
+  font-size: 13px;
+  font-weight: 500;
+  color: #303030;
+}
+.all_stores {
+  margin-top: 10px;
+  display: flex;
+  border-radius: 8px;
+  cursor: pointer;
+  align-items: center;
+  gap: 5px;
+  /* background: var(--light); */
+  padding: 6px;
+}
+.stroke_line {
+  margin-top: 8px;
+  margin-left: -10px;
+  width: calc(350px + 50px);
+  height: 0px;
+  border: 0.75px solid #e1e1e1;
+}
+.login_store {
+  font-size: 13px;
+  color: #303030;
+}
+.login_logo_mobile {
+  background: $badges-green;
+  padding: 7px 8px;
+  border-radius: 8px;
+  color: $bg-color;
+  text-align: center;
+  cursor: pointer;
+}
+.login_name {
+  --grey-100: #616161;
+  --light: #e3e3e3;
+  color: var(--light);
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+.login_name p {
+  --grey-100: #616161;
+  --light: #e3e3e3;
+  font-size: 12px;
+  line-height: 130%;
+  background: var(--grey-200);
+  border-radius: 8px;
+  padding: 10px 35px 10px 8px;
+  /* outline: 2px solid transparent; */
+}
+
+.more_nav {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2px;
+  /* justify-content: ; */
+}
+.more_nav a {
+  color: #303030;
+  display: block;
+  padding: 8px;
+  /* background: red; */
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+}
+.login_logo {
+  --grey-200: #322f33;
+  position: absolute;
+  right: 2px;
+  bottom: 6px;
+  color: var(--grey-200);
+  background: #36fba1;
+  display: inline;
+  padding: 5px;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+.mail_info p:first-of-type {
+  font-size: 13px;
+  font-weight: 500;
+}
+.mail_info > div {
+  display: block;
+  padding: 8px;
+  line-height: 120%;
+}
+.mail_info p {
+  font-size: 12px;
+}
