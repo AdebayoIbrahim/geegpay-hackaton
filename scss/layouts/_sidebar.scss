@@ -76,12 +76,29 @@
         border-radius: calc($curve-radius + 80px);
 
         // condition-style-for-toggled
-        .active_toggle {
-          background: $badges-green;
+        .nav_toggle:first-of-type > svg {
           padding: 6px;
+          border-radius: 50%;
+        }
+        .nav_toggle:last-of-type > svg {
+          padding: 4px;
           border-radius: 50%;
         }
       }
     }
+  }
+}
+
+.active_toggle > svg {
+  background: $badges-green;
+  // fill: $bg-color;
+  path {
+    fill: $bg-color;
+  }
+}
+
+.reset_cl > svg {
+  path {
+    fill: #b2abab;
   }
 }

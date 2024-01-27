@@ -210,3 +210,27 @@ login_info.forEach((f) => {
     }
   });
 });
+
+//nav-theme-toggle
+const active = document.querySelectorAll(".nav_toggle");
+active.forEach((act) => {
+  act.addEventListener("click", setActive);
+});
+
+function setActive(e) {
+  active.forEach((acct) => {
+    acct.classList.remove("active_toggle");
+    acct.classList.remove("reset_cl");
+  });
+
+  e.currentTarget.classList.add("active_toggle");
+  e.currentTarget.classList.remove("reset_cl");
+}
+
+// toggles-for-light&dark
+var dark = document.getElementById("dark");
+dark.onclick = function () {
+  darkMode();
+};
+
+function darkMode() {}

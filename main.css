@@ -469,10 +469,24 @@ body {
   gap: 1rem;
   border-radius: 100px;
 }
-.sidebar .sidebar_container .side-major .theme_toggle .active_toggle {
-  background: #34caa5;
+.sidebar .sidebar_container .side-major .theme_toggle .nav_toggle:first-of-type > svg {
   padding: 6px;
   border-radius: 50%;
+}
+.sidebar .sidebar_container .side-major .theme_toggle .nav_toggle:last-of-type > svg {
+  padding: 4px;
+  border-radius: 50%;
+}
+
+.active_toggle > svg {
+  background: #34caa5;
+}
+.active_toggle > svg path {
+  fill: #ffffff;
+}
+
+.reset_cl > svg path {
+  fill: #b2abab;
 }
 
 section.main-cta {
