@@ -6,22 +6,34 @@ const gradient = ctx.createLinearGradient(0, 0, 0, 300);
 gradient.addColorStop(0, "#34CAA5");
 gradient.addColorStop(1, "rgba(52, 202, 165, 0)");
 
+let week = false;
+//get the input value select drop-down
+const sortValue = document.getElementById("sort");
+sortValue.addEventListener("change", (e) => {
+  console.log(e.target.value);
+  if (e.target.value == "Weekly") {
+    week = true;
+  } else {
+    week = false;
+  }
+});
+
 const myChart = new Chart(ctx, {
   type: "bar",
   data: {
     labels: [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "Mei",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Okt",
-      "Nov",
-      "Des",
+      week ? "Sun" : "Jan",
+      week ? "Mon" : "Feb",
+      week ? "Tue" : "Mar",
+      week ? "Wed" : "Apr",
+      week ? "Thu" : "Mei",
+      week ? "Fri" : "Jun",
+      week ? "Sat" : "Jul",
+      week ? "Sun" : "Aug",
+      week ? "Mon" : "Sep",
+      week ? "Tue" : "Okt",
+      week ? "Wed" : "Nov",
+      week ? "Fri" : "Des",
     ],
     datasets: [
       {
@@ -155,7 +167,7 @@ const monthArr = [
 ];
 
 const getDay = monthArr[new Date().getMonth()];
-console.log(getDay);
+// console.log(getDay);
 //set output to date value
 const day = new Date().getDate();
 const yr = new Date().getFullYear();
