@@ -125,6 +125,9 @@ body {
   border: 1px solid #dadddd;
   border-radius: 50%;
 }
+.container .search-notifications .notify-loginInfo .logo-bell-sm .bell:hover {
+  background: #34caa5;
+}
 @media only screen and (max-width: 1020px) {
   .container .search-notifications .notify-loginInfo .logo-bell-sm {
     display: flex;
@@ -140,6 +143,9 @@ body {
   padding: 10px;
   border: 1px solid #dadddd;
   border-radius: 50%;
+}
+.container .search-notifications .notify-loginInfo .logo-major .bell:hover {
+  background: #34caa5;
 }
 .container .search-notifications .notify-loginInfo .logo-major .login_info {
   background: inherit;

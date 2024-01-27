@@ -94,6 +94,10 @@
           padding: 10px;
           border: 1px solid $strohe-board;
           border-radius: 50%;
+
+          &:hover {
+            background: $badges-green;
+          }
         }
         @media only screen and (max-width: 1020px) {
           display: flex;
@@ -110,6 +114,10 @@
           padding: 10px;
           border: 1px solid $strohe-board;
           border-radius: 50%;
+
+          &:hover {
+            background: $badges-green;
+          }
         }
         .login_info {
           background: inherit;
