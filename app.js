@@ -243,6 +243,9 @@ const main_cta = document.querySelector(".main-cta");
 const canvas_dark = document.querySelector(".canvas");
 const row_gut = document.querySelectorAll("#row_gut");
 const tr_col = document.querySelectorAll("#tr_col");
+const total_area = document.querySelectorAll(".total-area");
+const amt = document.querySelectorAll(".amt");
+const search = document.querySelector("#search");
 function darkMode() {
   side.classList.add("side-dark");
   nav.classList.add("nav-dark");
@@ -264,4 +267,12 @@ function darkMode() {
   tr_col.forEach((cal) => {
     cal.classList.add("fade_col");
   });
+  total_area.forEach((cal) => {
+    cal.classList.add("cv_dark");
+  });
+  amt.forEach((cal) => {
+    cal.classList.add("dark-col");
+  });
+  search.classList.add("inp-bg");
+  sortValue.classList.add("inp-bg");
 }

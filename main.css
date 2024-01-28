@@ -47,7 +47,7 @@ body {
 }
 
 .toggle_dark {
-  background: #787486 !important;
+  background: #586a84 !important;
 }
 
 .svg-dark path {
@@ -70,8 +70,13 @@ body {
   color: #787486 !important;
 }
 
-.fade_col {
-  color: #787486 !important;
+.dark-col {
+  color: #586a84 !important;
+}
+
+.inp-bg {
+  background: #3b4758 !important;
+  border: 1px solid #3b4758 !important;
 }
 
 .container div.navbar {

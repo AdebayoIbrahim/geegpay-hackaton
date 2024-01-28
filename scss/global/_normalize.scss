@@ -53,7 +53,7 @@ body {
 }
 
 .toggle_dark {
-  background: cl.$color_fade !important;
+  background: cl.$dark-color !important;
 }
 
 .svg-dark {
@@ -83,6 +83,10 @@ body {
   }
 }
 
-.fade_col {
-  color: cl.$color_fade !important;
+.dark-col {
+  color: cl.$dark-color !important;
+}
+.inp-bg {
+  background: cl.$input-dark !important;
+  border: 1px solid cl.$input-dark !important;
 }
