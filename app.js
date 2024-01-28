@@ -315,8 +315,8 @@ function lightMode() {
   });
   search.classList.remove("inp-bg");
   sortValue.classList.remove("inp-bg");
-  login_dropdwn.classList.remove("cv_dark");
-  notifyBar.classList.remove("cv_dark");
+  login_dropdwn.classList.remove("dropdwns-dark");
+  notifyBar.classList.remove("dropdwns-dark");
 }
 
 // should remove the display blocks
