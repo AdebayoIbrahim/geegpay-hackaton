@@ -793,7 +793,7 @@ section.main-cta .last-grid-row .content-platform .book-bazar .progress-bar::bef
   content: "";
   background: #6160dc;
   width: 54.2%;
-  height: 10px;
+  height: 100%;
   border-radius: inherit;
 }
 section.main-cta .last-grid-row .content-platform .book-bazar .progress-bar-artisan:before {

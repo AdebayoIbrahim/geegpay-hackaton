@@ -293,7 +293,9 @@ section.main-cta {
             content: "";
             background: $progress-bazar;
             width: calc(54% + 0.2%);
-            height: 10px;
+            // top: 20%;
+            // bottom: 50%;
+            height: 100%;
             border-radius: inherit;
           }
         }
