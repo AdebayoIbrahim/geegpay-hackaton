@@ -42,3 +42,43 @@ body {
 * a {
   text-decoration: none;
 }
+
+// toggle-dark-themes
+.side-dark,
+.nav-dark,
+.sidebar_container_dark {
+  background: cl.$bg-side-major-dark !important;
+  color: cl.$bg-color !important;
+  border: 1px solid cl.$bg-side-major-dark !important;
+}
+
+.toggle_dark {
+  background: cl.$color_fade !important;
+}
+
+.svg-dark {
+  path {
+    // stroke: cl.$bg-color !important;
+    fill: cl.$bg-color !important;
+  }
+}
+
+.svg_dark_stroke {
+  path {
+    stroke: cl.$bg-color;
+  }
+}
+
+.main_cta_dark {
+  background: cl.$bg-color-dark !important;
+  // border-radius: 5px !important;
+}
+
+.cv_dark {
+  background: cl.$bg-side-major-dark !important;
+
+  div,
+  .sort_by {
+    color: cl.$color_fade !important;
+  }
+}

@@ -38,6 +38,38 @@ body {
   text-decoration: none;
 }
 
+.side-dark,
+.nav-dark,
+.sidebar_container_dark {
+  background: #1d232c !important;
+  color: #ffffff !important;
+  border: 1px solid #1d232c !important;
+}
+
+.toggle_dark {
+  background: #787486 !important;
+}
+
+.svg-dark path {
+  fill: #ffffff !important;
+}
+
+.svg_dark_stroke path {
+  stroke: #ffffff;
+}
+
+.main_cta_dark {
+  background: #161b21 !important;
+}
+
+.cv_dark {
+  background: #1d232c !important;
+}
+.cv_dark div,
+.cv_dark .sort_by {
+  color: #787486 !important;
+}
+
 .container div.navbar {
   display: flex;
   justify-content: space-between;

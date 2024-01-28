@@ -233,4 +233,27 @@ dark.onclick = function () {
   darkMode();
 };
 
-function darkMode() {}
+const side = document.querySelector(".sidebar");
+const nav = document.querySelector(".navbar");
+const sidebar_container = document.querySelector(".sidebar_container");
+const theme_toggle = document.querySelector(".theme_toggle");
+const nav_svg = document.querySelectorAll("#nav_svg");
+const nav_cal = document.querySelector("#nav_cal");
+const main_cta = document.querySelector(".main-cta");
+const canvas_dark = document.querySelector(".canvas");
+function darkMode() {
+  side.classList.add("side-dark");
+  nav.classList.add("nav-dark");
+  sidebar_container.classList.add("sidebar_container_dark");
+  theme_toggle.classList.add("toggle_dark");
+  // notifyBar.classList.add("svg-dark");
+  nav_svg.forEach((cal) => {
+    cal.classList.add("svg-dark");
+  });
+  nav_cal.classList.add("svg_dark_stroke");
+  login_info.forEach((cal) => {
+    cal.classList.add("svg-dark");
+  });
+  main_cta.classList.add("main_cta_dark");
+  canvas_dark.classList.add("cv_dark");
+}
