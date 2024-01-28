@@ -246,6 +246,7 @@ const tr_col = document.querySelectorAll("#tr_col");
 const total_area = document.querySelectorAll(".total-area");
 const amt = document.querySelectorAll(".amt");
 const search = document.querySelector("#search");
+// function to trigger dark mode
 function darkMode() {
   side.classList.add("side-dark");
   nav.classList.add("nav-dark");
@@ -265,7 +266,7 @@ function darkMode() {
     cal.classList.add("cv_dark");
   });
   tr_col.forEach((cal) => {
-    cal.classList.add("fade_col");
+    cal.classList.add("dark-col");
   });
   total_area.forEach((cal) => {
     cal.classList.add("cv_dark");
@@ -276,3 +277,5 @@ function darkMode() {
   search.classList.add("inp-bg");
   sortValue.classList.add("inp-bg");
 }
+
+//function to reset back the mode to light
