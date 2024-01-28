@@ -21,3 +21,16 @@
 
 #### Medium Screens
 ![geegpay-md](https://github.com/AdebayoIbrahim/geegpay-hackaton/assets/98415538/4fb19f39-7aaa-44c7-b85a-8f58dca58338)
+
+#### small screens
+![geegpay-sm](https://github.com/AdebayoIbrahim/geegpay-hackaton/assets/98415538/12f0702a-9958-4873-83d3-2dbcd074cefb)
+
+
+#### Dark Modes💥
+![geegpay-dark](https://github.com/AdebayoIbrahim/geegpay-hackaton/assets/98415538/4f1fa331-09da-4a3d-b437-2489cf46cf79)
+![geegpay-dark-2](https://github.com/AdebayoIbrahim/geegpay-hackaton/assets/98415538/0623da1d-a11d-42d8-a23f-0112199aed03)
+![geegpay-dark3](https://github.com/AdebayoIbrahim/geegpay-hackaton/assets/98415538/8d66e869-92e1-47f4-8b83-58712ccfbedc)
+![geegpay-4](https://github.com/AdebayoIbrahim/geegpay-hackaton/assets/98415538/454aeed1-cf41-41c4-a2a1-371f601ee5c0)
+
+
+
