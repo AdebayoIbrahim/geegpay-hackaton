@@ -314,3 +314,18 @@ function lightMode() {
   search.classList.remove("inp-bg");
   sortValue.classList.remove("inp-bg");
 }
+
+// should remove the display blocks
+window.addEventListener("click", (e) => {
+  if (!e.target.matches("#expand_login")) {
+    login_dropdwn.classList.contains("login_drpdnn_show") &&
+      login_dropdwn.classList.remove("login_drpdnn_show");
+  }
+  clickNotify(e);
+});
+function clickNotify(e) {
+  if (!e.target.matches(".bell")) {
+    notifyBar.classList.toggle("notifyShow") &&
+      notifyBar.classList.remove("notifyShow");
+  }
+}
