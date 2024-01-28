@@ -88,6 +88,31 @@ body {
   transition: all 600ms ease-in-out !important;
 }
 
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #34caa5;
+  color: #ffffff;
+  padding: 8px;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  visibility: hidden;
+}
+
+.tooltip-container:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
 .container div.navbar {
   display: flex;
   justify-content: space-between;
