@@ -281,6 +281,8 @@ function darkMode() {
   });
   search.classList.add("inp-bg");
   sortValue.classList.add("inp-bg");
+  login_dropdwn.classList.add("dropdwns-dark");
+  notifyBar.classList.add("dropdwns-dark");
 }
 
 //function to reset back the mode to light
@@ -313,6 +315,8 @@ function lightMode() {
   });
   search.classList.remove("inp-bg");
   sortValue.classList.remove("inp-bg");
+  login_dropdwn.classList.remove("cv_dark");
+  notifyBar.classList.remove("cv_dark");
 }
 
 // should remove the display blocks

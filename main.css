@@ -88,6 +88,15 @@ body {
   transition: all 600ms ease-in-out !important;
 }
 
+.dropdwns-dark {
+  background: #1d232c !important;
+  transition: all 600ms ease-in-out !important;
+}
+.dropdwns-dark a,
+.dropdwns-dark p {
+  color: #586a84 !important;
+}
+
 .tooltip-container {
   position: relative;
   display: inline-block;
@@ -276,7 +285,7 @@ body {
 }
 @media only screen and (max-width: 600px) {
   .notify {
-    width: 150px;
+    width: 250px;
   }
 }
 
@@ -352,7 +361,7 @@ body {
 }
 @media only screen and (max-width: 600px) {
   .login_dropdwn {
-    width: 150px;
+    width: 250px;
   }
 }
 
