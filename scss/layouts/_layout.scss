@@ -7,6 +7,7 @@
     display: flex;
     justify-content: space-between;
     background: $boards-color;
+    transition: all 600ms ease-in-out;
     position: sticky;
     top: 0;
     padding: $padding;
@@ -37,6 +38,7 @@
         border-radius: $curve-radius;
         text-indent: 35px;
         background: $bg-color;
+        transition: all 600ms ease-in-out;
         &::placeholder {
           font-size: 15px;
           color: $strohe-board;
@@ -93,6 +95,7 @@
           background: inherit;
           padding: 10px;
           border: 1px solid $strohe-board;
+          transition: all 600ms ease-in-out;
           border-radius: 50%;
 
           &:hover {
@@ -113,6 +116,7 @@
           background: inherit;
           padding: 10px;
           border: 1px solid $strohe-board;
+          transition: all 600ms ease-in-out;
           border-radius: 50%;
 
           &:hover {

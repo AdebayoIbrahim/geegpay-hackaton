@@ -5,6 +5,7 @@
 .sidebar {
   width: 70px;
   background: $bg-color;
+  transition: all 600ms ease-in-out;
   color: white;
   height: 100vh;
   overflow-y: auto;
@@ -32,6 +33,7 @@
   }
   .sidebar_container {
     background: $bg-side-major;
+    transition: all 600ms ease-in-out;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -71,6 +73,7 @@
         background: $bg-color;
         display: flex;
         flex-direction: column;
+        transition: all 600ms ease-in-out;
         align-items: center;
         gap: 1rem;
         border-radius: calc($curve-radius + 80px);

@@ -228,11 +228,16 @@ function setActive(e) {
 }
 
 // toggles-for-light&dark
-var dark = document.getElementById("dark");
+const dark = document.getElementById("dark");
 dark.onclick = function () {
   darkMode();
 };
+const light = document.getElementById("light");
+light.onclick = function () {
+  lightMode();
+};
 
+// light/dark-mode configs
 const side = document.querySelector(".sidebar");
 const nav = document.querySelector(".navbar");
 const sidebar_container = document.querySelector(".sidebar_container");
@@ -279,3 +284,33 @@ function darkMode() {
 }
 
 //function to reset back the mode to light
+function lightMode() {
+  side.classList.remove("side-dark");
+  nav.classList.remove("nav-dark");
+  sidebar_container.classList.remove("sidebar_container_dark");
+  theme_toggle.classList.remove("toggle_dark");
+  // notifyBar.classList.remove("svg-dark");
+  nav_svg.forEach((cal) => {
+    cal.classList.remove("svg-dark");
+  });
+  nav_cal.classList.remove("svg_dark_stroke");
+  login_info.forEach((cal) => {
+    cal.classList.remove("svg-dark");
+  });
+  main_cta.classList.remove("main_cta_dark");
+  canvas_dark.classList.remove("cv_dark");
+  row_gut.forEach((cal) => {
+    cal.classList.remove("cv_dark");
+  });
+  tr_col.forEach((cal) => {
+    cal.classList.remove("dark-col");
+  });
+  total_area.forEach((cal) => {
+    cal.classList.remove("cv_dark");
+  });
+  amt.forEach((cal) => {
+    cal.classList.remove("dark-col");
+  });
+  search.classList.remove("inp-bg");
+  sortValue.classList.remove("inp-bg");
+}

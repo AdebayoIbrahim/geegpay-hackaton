@@ -5,6 +5,7 @@ section.main-cta {
   background: $bg-side-major;
   padding: $padding-cta;
   display: flex;
+  transition: all 600ms ease-in-out;
   // height: 100vh;
   // overflow-y: auto;
   //   text-align: center;
@@ -30,6 +31,7 @@ section.main-cta {
 
   .canvas {
     background: $bg-color;
+    transition: all 600ms ease-in-out;
     padding: 15px;
     border-radius: $board-radius;
 
@@ -109,6 +111,7 @@ section.main-cta {
       flex-direction: column;
       gap: 15px;
       border-radius: $board-radius;
+      transition: all 600ms ease-in-out;
       padding: 15px;
       background: $bg-color;
       //   height: 150px;
@@ -146,6 +149,7 @@ section.main-cta {
           color: $badges-green;
           background: $bg-badges-green;
           padding: 5px 8px;
+
           border-radius: 20px;
           text-align: center;
 
@@ -157,6 +161,7 @@ section.main-cta {
     }
   }
   .grid-row-two {
+    transition: all 600ms ease-in-out;
     @extend .canvas;
 
     @media only screen and (min-width: 1400px) {
@@ -209,6 +214,7 @@ section.main-cta {
       tr > td:nth-child(3) {
         color: $table_amt;
         font-size: 16px;
+
         line-height: 24px;
         font-weight: 500;
       }
@@ -247,7 +253,7 @@ section.main-cta {
   //   last-grid-row
   .last-grid-row {
     @extend .canvas;
-
+    transition: all 600ms ease-in-out;
     @media only screen and (min-width: 1400px) {
       grid-column: span 2;
     }

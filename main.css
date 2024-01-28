@@ -92,6 +92,7 @@ body {
   display: flex;
   justify-content: space-between;
   background: #fafafa;
+  transition: all 600ms ease-in-out;
   position: sticky;
   top: 0;
   padding: 1.2rem 1rem 0.8rem 6.2rem;
@@ -123,6 +124,7 @@ body {
   border-radius: 20px;
   text-indent: 35px;
   background: #ffffff;
+  transition: all 600ms ease-in-out;
 }
 .container .search-notifications .search-box input::-moz-placeholder {
   font-size: 15px;
@@ -179,6 +181,7 @@ body {
   background: inherit;
   padding: 10px;
   border: 1px solid #dadddd;
+  transition: all 600ms ease-in-out;
   border-radius: 50%;
 }
 .container .search-notifications .notify-loginInfo .logo-bell-sm .bell:hover {
@@ -198,6 +201,7 @@ body {
   background: inherit;
   padding: 10px;
   border: 1px solid #dadddd;
+  transition: all 600ms ease-in-out;
   border-radius: 50%;
 }
 .container .search-notifications .notify-loginInfo .logo-major .bell:hover {
@@ -457,6 +461,7 @@ body {
 .sidebar {
   width: 70px;
   background: #ffffff;
+  transition: all 600ms ease-in-out;
   color: white;
   height: 100vh;
   overflow-y: auto;
@@ -480,6 +485,7 @@ body {
 }
 .sidebar .sidebar_container {
   background: #f7f8fa;
+  transition: all 600ms ease-in-out;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -515,6 +521,7 @@ body {
   background: #ffffff;
   display: flex;
   flex-direction: column;
+  transition: all 600ms ease-in-out;
   align-items: center;
   gap: 1rem;
   border-radius: 100px;
@@ -543,6 +550,7 @@ section.main-cta {
   background: #f7f8fa;
   padding: 1.2rem 1rem 0.8rem 6.2rem;
   display: flex;
+  transition: all 600ms ease-in-out;
   display: grid;
   gap: 2rem;
 }
@@ -569,6 +577,7 @@ section.main-cta {
 }
 section.main-cta .canvas, section.main-cta .last-grid-row, section.main-cta .grid-row-two {
   background: #ffffff;
+  transition: all 600ms ease-in-out;
   padding: 15px;
   border-radius: 14px;
 }
@@ -646,6 +655,7 @@ section.main-cta .content-stat .total-area {
   flex-direction: column;
   gap: 15px;
   border-radius: 14px;
+  transition: all 600ms ease-in-out;
   padding: 15px;
   background: #ffffff;
 }
@@ -684,6 +694,9 @@ section.main-cta .content-stat .total-area .badge-text .badge {
 }
 section.main-cta .content-stat .total-area .badge-text .badge .span_arrow {
   padding-inline: 2px;
+}
+section.main-cta .grid-row-two {
+  transition: all 600ms ease-in-out;
 }
 @media only screen and (min-width: 1400px) {
   section.main-cta .grid-row-two {
@@ -765,6 +778,9 @@ section.main-cta .grid-row-two table td {
 section.main-cta .grid-row-two table th,
 section.main-cta .grid-row-two table tr:not(:last-of-type) {
   border-bottom: 1px solid #edf2f6;
+}
+section.main-cta .last-grid-row {
+  transition: all 600ms ease-in-out;
 }
 @media only screen and (min-width: 1400px) {
   section.main-cta .last-grid-row {
