@@ -44,39 +44,48 @@ body {
   background: #1d232c !important;
   color: #ffffff !important;
   border: 1px solid #1d232c !important;
+  transition: all 600ms ease-in-out !important;
 }
 
 .toggle_dark {
   background: #586a84 !important;
+  transition: all 600ms ease-in-out !important;
 }
 
 .svg-dark path {
   fill: #ffffff !important;
+  transition: all 600ms ease-in-out !important;
 }
 
 .svg_dark_stroke path {
   stroke: #ffffff;
+  transition: all 600ms ease-in-out !important;
 }
 
 .main_cta_dark {
   background: #161b21 !important;
+  transition: all 600ms ease-in-out !important;
 }
 
 .cv_dark {
   background: #1d232c !important;
+  transition: all 600ms ease-in-out !important;
 }
 .cv_dark div,
 .cv_dark .sort_by {
   color: #787486 !important;
+  transition: all 600ms ease-in-out !important;
 }
 
 .dark-col {
   color: #586a84 !important;
+  transition: all 600ms ease-in-out !important;
 }
 
 .inp-bg {
   background: #3b4758 !important;
   border: 1px solid #3b4758 !important;
+  transition: all 600ms ease-in-out !important;
 }
 
 .container div.navbar {

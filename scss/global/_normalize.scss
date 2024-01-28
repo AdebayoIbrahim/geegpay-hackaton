@@ -50,43 +50,52 @@ body {
   background: cl.$bg-side-major-dark !important;
   color: cl.$bg-color !important;
   border: 1px solid cl.$bg-side-major-dark !important;
+  transition: all 600ms ease-in-out !important;
 }
 
 .toggle_dark {
   background: cl.$dark-color !important;
+  transition: all 600ms ease-in-out !important;
 }
 
 .svg-dark {
   path {
     // stroke: cl.$bg-color !important;
     fill: cl.$bg-color !important;
+    transition: all 600ms ease-in-out !important;
   }
 }
 
 .svg_dark_stroke {
   path {
     stroke: cl.$bg-color;
+    transition: all 600ms ease-in-out !important;
   }
 }
 
 .main_cta_dark {
   background: cl.$bg-color-dark !important;
+  transition: all 600ms ease-in-out !important;
   // border-radius: 5px !important;
 }
 
 .cv_dark {
   background: cl.$bg-side-major-dark !important;
+  transition: all 600ms ease-in-out !important;
 
   div,
   .sort_by {
     color: cl.$color_fade !important;
+    transition: all 600ms ease-in-out !important;
   }
 }
 
 .dark-col {
   color: cl.$dark-color !important;
+  transition: all 600ms ease-in-out !important;
 }
 .inp-bg {
   background: cl.$input-dark !important;
   border: 1px solid cl.$input-dark !important;
+  transition: all 600ms ease-in-out !important;
 }
