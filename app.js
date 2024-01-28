@@ -242,6 +242,7 @@ const nav_cal = document.querySelector("#nav_cal");
 const main_cta = document.querySelector(".main-cta");
 const canvas_dark = document.querySelector(".canvas");
 const row_gut = document.querySelectorAll("#row_gut");
+const tr_col = document.querySelectorAll("#tr_col");
 function darkMode() {
   side.classList.add("side-dark");
   nav.classList.add("nav-dark");
@@ -259,5 +260,8 @@ function darkMode() {
   canvas_dark.classList.add("cv_dark");
   row_gut.forEach((cal) => {
     cal.classList.add("cv_dark");
+  });
+  tr_col.forEach((cal) => {
+    cal.classList.add("fade_col");
   });
 }
